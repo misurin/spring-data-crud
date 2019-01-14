@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/crud/utrancell")
-public class UtranCellCRUDController extends JpaResourceCrudController<UtranCell, Long> {
+public class UtranCellCRUDController extends AbstractCrudController<UtranCell, Long> {
 
   @Autowired
   private UtranCellRepository utranCellRepository;
