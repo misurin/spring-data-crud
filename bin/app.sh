@@ -1,14 +1,14 @@
 #!/bin/sh
 
-APP_BASE=/home/dpi/DpiAgentNov
-APP_NAME="DPI Agent"
-APP_JAR=DpiAgent-1.0-Nov.jar
+APP_BASE=/network-metadata-crud-apis
+APP_NAME="Network metadata CRUD APIs"
+APP_JAR=network-metadata-crud-0.0.1-SNAPSHOT.jar
 APP_OPTS="-XX:-LoopUnswitching -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"
 
 export LD_LIBRARY_PATH=${APP_BASE}
 PID=$(pgrep -f ${APP_JAR})
 
-cd ${APP_BASE} #This is to avoid using java -classpath
+#cd ${APP_BASE} #This is to avoid using java -classpath
 
 stop_app(){
     echo "Stopping $APP_NAME..."
